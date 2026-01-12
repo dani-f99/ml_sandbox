@@ -1,12 +1,7 @@
 ##########################
 # Import required packages
-from sqlalchemy import create_engine
 from datetime import datetime
-import importlib.metadata
 import pandas as pd
-import unittest
-import json
-import sys
 import os
 
 
@@ -41,7 +36,7 @@ def check_packages(package_names):
 
 ################################################################################$$##########
 # Reading information from json file. Used to extract the parameters from the `config.json`.  
- def read_json(path:str = "sql_config.json") -> dict:
+def read_json(path:str = "sql_config.json") -> dict:
     """
     path : str -> path of the json file
     """
@@ -50,7 +45,7 @@ def check_packages(package_names):
         config_f = json.load(config)
 
     return config_f
-    
+
     
 #####################################################
 # Creating folder according to the and program scheme
